@@ -27,3 +27,8 @@ $botman->hears('/ayuda', function ($bot) {
     		$bot->reply($key . ": " . $value);
 	}
 });
+
+
+$botman->hears('acreca de|acerca', function ($bot) {    
+	$bot->reply("Prueba de acerca de o acerca.");
+});
