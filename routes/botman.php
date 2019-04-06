@@ -29,6 +29,6 @@ $botman->hears('/ayuda', function ($bot) {
 });
 
 
-$botman->hears('acreca de|acerca', function ($bot) {    
-	$bot->reply("Prueba de acerca de o acerca.");
+$botman->hears('acerca de|acerca', function ($bot) {    
+	$bot->reply("Bot realizado por el desarrollador Daniela Mideros");
 });
