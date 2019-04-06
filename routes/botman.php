@@ -36,3 +36,17 @@ $botman->hears('acerca de|acerca', function ($bot) {
 
 	$bot->reply($msj);
 });
+
+
+$botman->hears('listar quizzes|listar', function ($bot) {
+	$quizzes = \App\Quiz::orderby('titulo', 'asc')->get();
+
+	foreach($quizzes as $quiz)
+	{
+    		$bot->reply($quiz->id."- ".$quiz->titulo);
+	}
+
+	if(count($quizzes) == 0)
+    		$bot->reply("Ups, no hay cuestionarios para mostrar.");
+});
+
