@@ -28,7 +28,11 @@ $botman->hears('/ayuda', function ($bot) {
 	}
 });
 
+$botman->hears('acerca de|acerca', function ($bot) {
+	$msj = "Este bot de charla fue desarrollado por:\n".
+       	 "Danela Mideros Ospina <daniela.mideroso@autonoma.edu.co>\n".
+       	 "Durante la clase de Procesos Ágiles\n".
+       	 "de la Universidad Autónoma de Manizales.";
 
-$botman->hears('acerca de|acerca', function ($bot) {    
-	$bot->reply("Bot realizado por el desarrollador Daniela Mideros");
+	$bot->reply($msj);
 });
